@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en " lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>unitHub</title>
+</head>
+<body>
+    
+    
+    <header>
+        <div class="logo">
+            <img src="../img/logo-reason-svgrepo-com (2).svg" alt="Logo of unitHub">
+            <h1>unitHub</h1>
+        </div>
+    
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="#">Tutorial</a></li>
+                    <li><a href="#">Ferramentas</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="search">
+            <input type="text" name="search-site" id="search" placeholder="Pesquise por...">
+        </div>
+    </header>
+
+
+    <main>
+<div class="convesores">
+    <div class="introduction">
+        <h1>Simulador de Juros Compostos</h1>
+    
+        <p>Bem-vindo ao nosso simulador de rendimentos para investimentos com juros compostos. Insira suas informações para ver como seu dinheiro pode crescer ao longo do tempo.</p>
+    
+        </div>
+    
+        
+<div class="simulador-container">
+
+    <div class="simulador-container">
+       
+
+
+
+    <div class="campo">
+        <label for="valor-inicial">Valor inicial</label>
+        <div class="input-group">
+            <span>R$</span>
+            <input type="number" id="valor-inicial" placeholder="100,00">
+        </div>
+    </div>
+    
+    <div class="campo">
+        <label for="valor-mensal">Valor mensal</label>
+        <div class="input-group">
+            <span>R$</span>
+            <input type="number" id="valor-mensal" placeholder="100,00">
+        </div>
+    </div>
+    
+    <div class="campo">
+        <label for="taxa-juros">Taxa de juros</label>
+        <div class="input-group">
+            <span>%</span>
+            <input type="number" id="taxa-juros" value="8">
+            <select id="tipo-juros">
+                <option value="anual">anual</option>
+                <option value="mensal">mensal</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="campo">
+        <label for="periodo">Período</label>
+        <div class="input-group">
+            <input type="number" id="periodo" value="1">
+            <select id="tipo-periodo">
+                <option value="anos">ano(s)</option>
+                <option value="meses">mês(es)</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="botoes">
+        <button class="calcular" onclick="calculateAndDrawChart()">Calcular</button>
+        <button class="limpar" onclick="limparCampos()">Limpar</button>
+    </div>
+<!-- CONTAINER UM  -->
+</div>
+
+<div class="button2">
+    <button onclick="toggleView()">Alternar para Tabela</button>
+</div>
+<div id="chartContainer">
+    <canvas id="investmentChart" width="6000" height="400"></canvas>
+</div>
+<div id="tableContainer" style="display: none;">
+    <!-- A tabela será gerada aqui -->
+</div>
+
+
+
+
+
+
+</div>
+
+    
+      
+      <div class="ad-container">
+        <!-- Espaço para Anúncio -->
+        <p>Seu anúncio aqui</p>
+    </div>
+
+    <div id="temperatura"></div>
+    
+          <!-- Gráfico de rendimento -->
+          <div class="graph">
+    
+    
+         
+            <h1>Como usar a Calculadora de Juros Compostos</h1>
+            <p>Nossa calculadora gratuita e sem anúncios facilita o cálculo de juros compostos. Siga o passo a passo abaixo para fazer suas simulações financeiras:</p>
+            
+            <h2>Passo a Passo</h2>
+            <ol>
+                <li><strong>Passo 1:</strong> No campo “valor inicial”, insira o valor que deseja investir inicialmente.</li>
+                <li><strong>Passo 2:</strong> Em “valor mensal”, coloque o valor que pretende investir a cada mês.</li>
+                <li><strong>Passo 3:</strong> Informe a taxa de juros no campo “taxa de juros”, podendo ser mensal ou anual.</li>
+                <li><strong>Passo 4:</strong> Em “período”, indique o tempo pelo qual deseja investir.</li>
+                <li><strong>Passo 5:</strong> Clique em “calcular” para ver o resultado final.</li>
+            </ol>
+        
+            <p>Para ilustrar, veja o exemplo: com um investimento inicial de R$ 1.000,00 e um aporte mensal de R$ 1.000,00 durante 20 anos a uma taxa anual de 8%, o valor total investido será de R$ 241 mil. No entanto, o montante final alcançará mais de R$ 573 mil, mostrando um rendimento de R$ 332 mil apenas em juros compostos.</p>
+        
+            <h2>Entenda a Fórmula dos Juros Compostos</h2>
+            <p>A fórmula para calcular os juros compostos é:</p>
+            <p><code>M = C (1+i)^t</code></p>
+            <p>Onde:</p>
+            <ul>
+                <li><strong>M</strong> é o montante final.</li>
+                <li><strong>C</strong> é o capital inicial investido.</li>
+                <li><strong>i</strong> é a taxa de juros.</li>
+                <li><strong>t</strong> é o período de investimento.</li>
+            </ul>
+            <p>Para garantir a precisão dos cálculos, a taxa e o tempo devem estar na mesma unidade (mensal ou anual), e a taxa deve estar em formato decimal.</p>
+            <div class="ad-container">
+                <!-- Espaço para Anúncio -->
+                <p>Seu anúncio aqui</p>
+            </div>
+            <h2>Onde os Juros Compostos São Aplicados?</h2>
+            <p>Os juros compostos, conhecidos como "juros sobre juros", são comuns em:</p>
+            <ul>
+                <li><strong>Contas:</strong> Para evitar atrasos, muitas empresas aplicam juros compostos, aumentando o valor devido caso o pagamento não seja feito em dia.</li>
+                <li><strong>Financiamentos:</strong> Em financiamentos, os juros compostos aumentam o valor final a ser pago.</li>
+                <li><strong>Investimentos:</strong> Muitos investimentos, como CDBs e Tesouro Direto, remuneram com juros compostos. Ao reinvestir dividendos, é possível maximizar o efeito dos juros compostos no longo prazo.</li>
+            </ul>
+        
+            <h2>Diferença entre Juros Simples e Juros Compostos</h2>
+            <p><strong>Juros Simples:</strong> Calculados apenas sobre o capital inicial, resultando em uma linha reta de crescimento.   <a href="#">simulador de juros simples</a></p>
+          
+            <br>
+            <p><strong>Juros Compostos:</strong> Calculados sobre o montante acumulado, resultando em uma curva ascendente.</p>
+            <p>Exemplo: com um investimento inicial de R$ 5.000,00 e uma taxa de 1% ao mês:</p>
+            <ul>
+                <li>Em 1 ano: Juros simples – R$ 5.600,00; Juros compostos – R$ 5.634,13.</li>
+                <li>Em 30 anos: Juros simples – R$ 23.000,00; Juros compostos – R$ 179.748,21.</li>
+            </ul>
+            <p>Como se vê, no longo prazo, os juros compostos geram um crescimento exponencial, conhecido como "a mágica dos juros compostos".</p>
+        
+            <p>Experimente nossa calculadora e compartilhe sua experiência!</p>
+         
+          </div>
+          <div class="ad-container">
+            <!-- Espaço para Anúncio -->
+            <p>Seu anúncio aqui</p>
+        </div>
+        
+</div>
+
+
+
+<div class="tools">
+<br><br>
+
+
+
+
+    <div id="tempo-duracao" class="tempo-duracao">
+        <h2>Tempo de Duração</h2>
+        <ol>
+            <li><a href="#" onclick="showContent('horasParaMinutos')">Horas para Minutos</a></li>
+            <li><a href="#" onclick="showContent('minutosParaHoras')">Minutos para Horas</a></li>
+            <li><a href="#" onclick="showContent('segundosParaMinutos')">Segundos para Minutos</a></li>
+            <li><a href="#" onclick="showContent('minutosParaSegundos')">Minutos para Segundos</a></li>
+            <li><a href="#" onclick="showContent('diasParaHoras')">Dias para Horas</a></li>
+            <li><a href="#" onclick="showContent('horasParaDias')">Horas para Dias</a></li>
+        </ol>
+    </div>
+
+    
+
+
+
+    
+    <div id="temperatura" class="tempo">
+        <h2>Temperatura</h2>
+        <ol>
+            <li><a href="#">Fahrenheit para Celsius</a></li>
+            <li><a href="#">Celsius para Fahrenheit</a></li>
+            <li><a href="#">Kelvin para Celsius</a></li>
+            <li><a href="#">Celsius para Kelvin</a></li>
+            <li><a href="#">Réaumur para Celsius</a></li>
+            <li><a href="#">Celsius para Réaumur</a></li>
+        </ol>
+    </div>
+    <hr class="custom">
+    
+    <div id="comprimento" class="comprimento">
+        <h2>Comprimento</h2>
+        <ol>
+            <li><a href="#">Metros para Quilômetros</a></li>
+            <li><a href="#">Quilômetros para Metros</a></li>
+            <li><a href="#">Centímetros para Metros</a></li>
+            <li><a href="#">Polegadas para Centímetros</a></li>
+            <li><a href="#">Pés para Metros</a></li>
+            <li><a href="#">Milhas para Quilômetros</a></li>
+        </ol>
+    </div>
+    <hr class="custom">
+    
+    <div id="peso" class="peso">
+        <h2>Peso</h2>
+        <ol>
+            <li><a href="#">Quilos para Gramas</a></li>
+            <li><a href="#">Gramas para Quilos</a></li>
+            <li><a href="#">Libras para Quilos</a></li>
+            <li><a href="#">Quilos para Libras</a></li>
+            <li><a href="#">Onças para Gramas</a></li>
+            <li><a href="#">Gramas para Onças</a></li>
+        </ol>
+    </div>
+    <hr class="custom">
+    
+    <div id="area" class="area">
+        <h2>Área</h2>
+        <ol>
+            <li><a href="#">Metros Quadrados para Acres</a></li>
+            <li><a href="#">Acres para Metros Quadrados</a></li>
+            <li><a href="#">Hectares para Metros Quadrados</a></li>
+            <li><a href="#">Metros Quadrados para Hectares</a></li>
+            <li><a href="#">Pés Quadrados para Metros Quadrados</a></li>
+            <li><a href="#">Jardins Quadrados para Metros Quadrados</a></li>
+        </ol>
+    </div>
+    <hr class="custom">
+    
+    <div id="volume" class="volume">
+        <h2>Volume</h2>
+        <ol>
+            <li><a href="#">Litros para Mililitros</a></li>
+            <li><a href="#">Mililitros para Litros</a></li>
+            <li><a href="#">Galões para Litros</a></li>
+            <li><a href="#">Litros para Galões</a></li>
+            <li><a href="#">Cubic Feet para Litros</a></li>
+            <li><a href="#">Litros para Cubic Feet</a></li>
+        </ol>
+    </div>
+    <hr class="custom">
+    
+    <div id="energia" class="energia">
+        <h2>Energia</h2>
+        <ol>
+            <li><a href="#">Joules para Calorias</a></li>
+            <li><a href="#">Calorias para Joules</a></li>
+            <li><a href="#">Quilowatt-hora para Joules</a></li>
+            <li><a href="#">Joules para Quilowatt-hora</a></li>
+        </ol>
+    </div>
+    <hr class="custom">
+    
+    <div id="velocidade" class="velocidade">
+        <h2>Velocidade</h2>
+        <ol>
+            <li><a href="#">Km/h para m/s</a></li>
+            <li><a href="#">m/s para Km/h</a></li>
+            <li><a href="#">Milhas/h para Km/h</a></li>
+            <li><a href="#">Km/h para Milhas/h</a></li>
+        </ol>
+    </div>
+    <hr class="custom">
+    
+    <div id="tempo-duracao" class="tempo-duracao">
+        <h2>Tempo de Duração</h2>
+        <ol>
+            <li><a href="#">Horas para Minutos</a></li>
+            <li><a href="#">Minutos para Horas</a></li>
+            <li><a href="#">Segundos para Minutos</a></li>
+            <li><a href="#">Minutos para Segundos</a></li>
+            <li><a href="#">Dias para Horas</a></li>
+            <li><a href="#">Horas para Dias</a></li>
+        </ol>
+    </div>
+    <hr class="custom">
+    
+    <div id="pressao" class="pressao">
+        <h2>Pressão</h2>
+        <ol>
+            <li><a href="#">Pascals para Atmosferas</a></li>
+            <li><a href="#">Atmosferas para Pascals</a></li>
+            <li><a href="#">Bar para Pascals</a></li>
+            <li><a href="#">Pascals para Bar</a></li>
+        </ol>
+    </div>
+    <div class="ad-container">
+        <!-- Espaço para Anúncio -->
+        <p>Seu anúncio aqui</p>
+    </div>
+</div>
+
+
+
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Sobre Nós</h2>
+                <p>Somos uma plataforma dedicada a oferecer ferramentas de conversão para facilitar suas tarefas do dia a dia.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Links Úteis</h2>
+                <ul>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                </ul>
+            </div>
+           
+            <div class="socials">
+                <h2>Desevolvedor</h2>
+
+               <div class="social">
+                <span><i class="bi bi-github"></i></span>
+                <a href="">GitHub</a>
+               </div>
+
+               <div class="social">
+                <span><i class="bi bi-instagram"></i></span>
+                <a href="#">Instagram</a>
+               </div>
+
+               <div class="social">
+                <span><i class="bi bi-linkedin"></i></span>
+                <a href="#">LinkeDin</a>
+               </div>
+
+               
+
+               
+                
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Todos os direitos reservados.</p>
+           
+        </div>
+
+    </footer>
+    
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,490 @@
+ /* Basic Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+   background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #0a1940; 
+    color: white;
+    box-shadow: 0 4px 8px rgba(5, 12, 72, 0.2);
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px; 
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 70px; /* Adjust as needed */
+    color: white;
+}
+
+/* Navigation Styling */
+.navigation nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between items */
+    margin: 0;
+    padding: 0;
+}
+
+.navigation nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+.navigation nav ul li a:hover {
+    color: #eef06f; /* Highlight color on hover */
+}
+
+/* Search Bar Styling */
+.search input[type="text"] {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    width:400px;
+    font-size: 25px;
+    margin-left: -10%;
+}
+
+.search input[type="text"]::placeholder {
+    color: #888;
+}
+
+.search input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 193, 7, 0.5); /* Light shadow for focus */
+}
+
+
+main {
+    display: flex;
+}
+
+.convesores {
+    width: 80%;
+    height: auto;
+    margin: 160px;
+    font-size: 30px;
+    overflow-y: auto;
+}
+
+
+/* Estilizando a barra de rolagem */
+.convesores::-webkit-scrollbar {
+  width: 20px; /* Largura da barra de rolagem */
+}
+
+.convesores::-webkit-scrollbar-track {
+  background: #e5e5e5; /* Cor do fundo da barra de rolagem */
+}
+
+.convesores::-webkit-scrollbar-thumb {
+  background: #707070; /* Cor da barra de rolagem (marrow) */
+  border-radius: 6px; /* Arredondar as bordas da barra de rolagem */
+}
+
+.convesores::-webkit-scrollbar-thumb:hover {
+  background: #b9b9b9; /* Cor da barra de rolagem ao passar o mouse */
+}
+
+
+.introduction h1 {
+    font-size: 2.8em;
+    color: #127683;
+    margin-bottom: 10px;
+  }
+  
+  .introduction p {
+    margin-bottom: 20px;
+    font-size: 30px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+.simulador-container {
+  width: 100%;
+  max-width: 2000px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 2px 4px 10px 3px rgba(210, 210, 210, 0.793);
+  margin-bottom: 20px;
+  display: block;
+}
+
+
+.campo {
+display:block ;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.campo label {
+  flex: 1;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  flex: 2;
+
+}
+
+.input-group span {
+  padding: 8px;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 4px 0 0 4px;
+  height: 5vh;
+  font-size: 1.4em;
+}
+
+.input-group input {
+  width: 100%;
+  height: 5vh;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  font-size: 1.6em;
+}
+
+.input-group select {
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  outline: none;
+  height: 5vh;
+  font-size: 1.9rem;
+}
+
+.botoes {
+  justify-content: space-between;
+  display: flex;
+}
+
+.botoes button {
+  padding: 10px 20px;
+  height: 5vh;
+  font-size: 2rem;
+  border: none;
+  border-radius: 4px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+
+.botoes button:hover {
+  background-color:#127683;
+  color: #fff;
+}
+
+
+.calcular {
+  background-color: #127683;
+  color: white;
+}
+
+
+.limpar {
+  background-color: #e9ecef;
+  color: #333;
+}
+  
+  .image, .table {
+    flex: 1 1 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+    text-align: center;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* passo a passo  */
+
+.graph h1, h2 {
+font-size: 2em;
+color: #127683;
+margin-bottom: 15px;
+}
+
+.graph p {
+  font-size: 2.5rem;
+}
+
+.graph ol {
+  list-style-type: none;
+  font-size: 2.5rem;
+}
+
+.graph ul {
+  font-size:2.5rem ;
+  list-style-type: none;
+}
+
+.graph strong {
+font-size: 2.5rem;
+color: #187284;
+margin: 25px 0 0 0;
+}
+
+.graph a {
+  color: rgb(206, 28, 28);
+}
+
+
+
+.ad-container {
+    width: 300px; /* Largura do anúncio */
+    height: 250px; /* Altura do anúncio */
+    background-color: #f1f1f1; /* Cor de fundo para identificar a área do anúncio */
+    border: 1px solid #ddd; /* Borda ao redor do anúncio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin: 20px auto; /* Espaçamento ao redor e centralização */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tools {
+    width: 20%;
+    height: 107vh; /* Define a altura total da div */
+    border-left: 10px solid #e5e5e5;
+    background-color: #e5e5e5;
+    overflow-y: auto; /* Rolagem vertical */
+    font-size: 30px;
+    margin-top: 5%;
+    border-radius: 15px;
+}
+
+/* Estilizando a barra de rolagem */
+.tools::-webkit-scrollbar {
+    width: 20px; /* Largura da barra de rolagem */
+}
+
+.tools::-webkit-scrollbar-track {
+    background: #e5e5e5; /* Cor do fundo da barra de rolagem */
+}
+
+.tools::-webkit-scrollbar-thumb {
+    background: #707070; /* Cor da barra de rolagem (marrow) */
+    border-radius: 6px; /* Arredondar as bordas da barra de rolagem */
+}
+
+.tools::-webkit-scrollbar-thumb:hover {
+    background: #b9b9b9; /* Cor da barra de rolagem ao passar o mouse */
+}
+
+
+.tools h1 {
+    font-size: 39px;
+    text-align:  center;
+    color: rgb(47, 10, 0);
+}
+
+.custom { 
+    border: 1px solid #bebebe;
+}
+
+.tools h2 {
+    text-align: center;
+    color: #000000;
+    font-size: 35px;
+    margin: 20px;
+}
+
+.tools li {
+    margin: 20px;
+    list-style-type: none;
+
+}
+
+.tools a {
+    text-decoration: none;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tools a:hover {
+  background-color: #bebebe;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  .navigation {
+    display: none;
+  }
+
+  .search { display: none;}
+}
+
+
+footer {
+    background-color: #0a1940; 
+    padding: 20px; /* Espaçamento interno */
+    color: #ffffff; /* Cor do texto */
+   font-size: 20px;
+    font-family: Arial, sans-serif; /* Fonte */
+}
+
+.footer-content {
+    display: flex; /* Disposição em flexbox */
+    justify-content: space-between; /* Espaço entre as seções */
+}
+
+.footer-section {
+    flex: 1; /* Cada seção ocupa espaço igual */
+    margin: 0 20px; /* Margem lateral */
+}
+
+.footer-section h2 {
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    color: #696969;
+}
+
+.footer-section ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding */
+}
+
+.footer-section a {
+    color: #ffffff; /* Cor dos links */
+    font-size: 25px;
+}
+
+.footer-section p {
+  font-size:22px ;
+}
+
+.footer-bottom {
+    text-align: center; /* Centraliza o conteúdo */
+    margin-top: 20px; /* Espaço acima do rodapé */
+}
+
+ .socials a {
+    margin: 0 10px; /* Espaçamento entre os links sociais */
+    text-decoration: none; /* Remove o sublinhado */
+    color: #ffffff; /* Cor dos links */
+    font-size: 20px;
+}
+
+.socials h2 {
+    color: #9c9c9c;
+}
+
+.social {
+    display: flex;
+    margin: 10px;
+}
+
+
+#chartContainer {
+  width: 100%; /* Ajuste conforme necessário */
+  height: 400px; /* Defina a altura desejada */
+  overflow-x: scroll; /* Adiciona scroll horizontal */
+}
+
+
+.button2 {
+  text-align: center;
+  
+}
+
+.button2 button {
+  padding: 10px 10px;
+  background-color:#ff0000;
+  color: #fff;
+  font-size: 30px;
+  border: none;
+  border-radius: 30px;
+  margin:20px ;
+}
+
+
+.button2 button:hover {
+background-color: #b80000;
+color: #ffffff;
+}
+
+
+#tableContainer {
+  width: 100%;
+  overflow-y: scroll; /* Adiciona rolagem horizontal, se necessário */
+  margin-top: 20px;
+  height: 30vh;
+}
+
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-size: 40px;
+}
+
+td {
+  font-size: 40px;
+  
+
+}
+
+td:hover  {
+background-color: #b9b9b9;
+}
